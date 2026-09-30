@@ -50,10 +50,6 @@ const Hero = () => {
 	 tl.to(videoref.current, {
 		currentTime: videoref.current.duration,
 	 })};
-
-
-
-
     },[])
   return (
     <>
@@ -86,5 +82,4 @@ const Hero = () => {
     </>
   )
 }
-
 export default Hero
