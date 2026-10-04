@@ -4,11 +4,6 @@ import ScrollTrigger from 'gsap-trial/all'
 import { featureLists, goodLists } from '../../constants'
 import { useMediaQuery } from 'react-responsive'
 import { useGSAP } from '@gsap/react'
-gsap.registerPlugin(
-    {
-        ScrollTrigger, 
-    }
-)
 const Art = () => {
     const isMobile= useMediaQuery({maxWidth:767})
     useGSAP(()=>{
@@ -40,8 +35,6 @@ const Art = () => {
             
         )
     })
-
-    
   return (
     <div id='art'>
       <div className='container mx-auton h-full pt-20'>
