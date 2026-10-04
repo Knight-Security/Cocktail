@@ -7,7 +7,7 @@ const Menu = () => {
     const totalCocktail=allCocktails.length
     const goToSlide=(index)=>{
         const newIndex=(index+totalCocktail)%totalCocktail;
-        
+        setcurrentIndex(newIndex)
     }
   return (
     
@@ -23,13 +23,25 @@ const Menu = () => {
                 const isActive= index===currentIndex
                 return (
                     <button key={cocktail.id} className={`${isActive ? 'text-white border-white ':'text-white/50 border-white/50'}`}
-                    onClick={()=>setcurrentIndex(cocktail.id)}
+                    onClick={()=>goToSlide(index)}
                     >
                         {cocktail.name}
                     </button>
                 )
             })}
         </nav>
+        <div className="content">
+            <div className="arrow">
+                <button className='text-left' onClick={()=>goToSlide(currentIndex-1)}>
+                    <span></span>
+                    <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true" />
+                </button>
+                <button className='text-left' onClick={()=>goToSlide(currentIndex+1)}>
+                    <span></span>
+                    <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true" />
+                </button>
+            </div>
+            </div> 
       </section>
     </div>
   )
