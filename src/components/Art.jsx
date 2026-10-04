@@ -24,7 +24,7 @@ const Art = () => {
         })
         maskTimeline.to('.will-fade',{
             opacity:0,stagger:0.2,ease:'power1.inOut'
-        }).to(
+        }).to( '.masked-img',
             {
                 scale:1.3,
                 maskPosition:'center',
@@ -32,7 +32,11 @@ const Art = () => {
                 duration:1,
                 ease:'power1.inOut'
             }
-        ).to(
+        ).to('#masked-content',
+            {
+                opacity:1,
+                ease:'power1.inOut'
+            }
             
         )
     })
